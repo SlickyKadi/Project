@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <title>الكتب</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myFunctions.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Books</h1>
+        <nav>
+            <a href="home.html">home</a>
+            <a href="AboutUs.html"> About us</a>
+            <a href="Books.html">Books</a>
+        </nav>
+    </header>
+    <main>
+        <!-- عرض الكتب في جدول -->
+        <section>
+            <h2>قائمة الكتب</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>عنوان الكتاب</th>
+                        <th>السعر</th>
+                        <th>رمز الكتاب (ISBN)</th>
+                        <th>إظهار التفاصيل</th>
+                        <th>إضافة إلى السلة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>مائة عام من العزلة</td>
+                        <td>35000 ل.س</td>
+                        <td>978-0307387899</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('مائة عام من العزلة', 35000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\مائة عام من العزلة.jpg" alt="غلاف الكتاب - مائة عام من العزلة" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار النشر العالمية<br>
+                            <strong>التصنيف:</strong> أدب أمريكي<br>
+                            <strong>ملخص:</strong> رواية تاريخية تؤرخ لحياة الأجيال المتعاقبة في عائلة بوينديا في قرية ماكوندو.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>قواعد العشق الاربعون</td>
+                        <td>24000 ل.س</td>
+                        <td>978-0140449744</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('قواعد العشق الاربعون ', 24000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\قواعد العشق الاربعون.jpg" alt="غلاف الكتاب - قواعد العشق الاربعون" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار الفن<br>
+                            <strong>التصنيف:</strong> رواية فلسفية<br>
+                            <strong>ملخص:</strong> تدور الرواية حول إيلا، التي تبدأ في قراءة كتاب عن رومي وشمس التبريزي، مما يغير مجرى حياتها..
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1984</td>
+                        <td>29000 ل.س</td>
+                        <td>978-0451524935</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('1984', 29000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\1984.jpg" alt="غلاف الكتاب - 1984" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار النشر الحديثة<br>
+                            <strong>التصنيف:</strong> خيال علمي<br>
+                            <strong>ملخص:</strong> رواية د dystopia تدور حول مراقبة الحكومة الكاملة للمجتمع وكيفية تأثير ذلك على الفرد.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>أليس في بلاد العجائب</td>
+                        <td>15000 ل.س</td>
+                        <td>978-1503236545</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('أليس في بلاد العجائب', 15000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\أليس في بلاد العجائب.png" alt="غلاف الكتاب - أليس في بلاد العجائب" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> مكتبة الأطفال<br>
+                            <strong>التصنيف:</strong> خيال للأطفال<br>
+                            <strong>ملخص:</strong> رواية خيالية تدور حول مغامرات أليس في عالم غريب مليء بالمفاجآت.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>الحياة في مكان آخر</td>
+                        <td>22000 ل.س</td>
+                        <td>978-0061122411</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('الحياة في مكان آخر', 22000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\الحياة في مكان آخر.jpg" alt="غلاف الكتاب - الحياة في مكان آخر" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار الأدب العربي<br>
+                            <strong>التصنيف:</strong> فلسفة<br>
+                            <strong>ملخص:</strong> رواية تركز على فلسفة الحياة والموت والتحديات التي يواجهها الإنسان في سعيه لفهم العالم من حوله.
+                        </td>
+
+                        <tr>
+                            <td>الحرب والسلام</td>
+                            <td>45000 ل.س</td>
+                            <td>978-0140447934</td>
+                            <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                            <td><button onclick="addToCart('الحرب والسلام', 45000)">إضافة</button></td>
+                        </tr>
+                        <tr class="details" style="display:none;">
+                            <td colspan="5">
+                                <img src="images\الحرب والسلام.jpg" alt="غلاف الكتاب - الحرب والسلام" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                                <br>
+                                <strong>الناشر:</strong> بانتام كلاسيكس<br>
+                                <strong>التصنيف:</strong> تاريخي<br>
+                                <strong>ملخص:</strong> سرد عن تأثير الحروب على حياة الأفراد في فترة نابليون.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>الجريمة والعقاب</td>
+                            <td>27000 ل.س</td>
+                            <td>978-0140449136</td>
+                            <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                            <td><button onclick="addToCart('الجريمة والعقاب', 27000)">إضافة</button></td>
+                        </tr>
+                        <tr class="details" style="display:none;">
+                            <td colspan="5">
+                                <img src="images\الجريمة والعقاب.jpg" alt="غلاف الكتاب - الجريمة والعقاب" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                                <br>
+                                <strong>الناشر:</strong> بانتام كلاسيكس<br>
+                                <strong>التصنيف:</strong> دراما نفسية<br>
+                                <strong>ملخص:</strong> قصة تدور حول جريمة قتل ارتكبها الشاب روديون راسكولنيكوف وتأثير ذلك على حياته.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>الأبله</td>
+                            <td>28000 ل.س</td>
+                            <td>978-0140449242</td>
+                            <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                            <td><button onclick="addToCart('الأبله', 28000)">إضافة</button></td>
+                        </tr>
+                        <tr class="details" style="display:none;">
+                            <td colspan="5">
+                                <img src="images\الأبله.jpg" alt="غلاف الكتاب - الأبله" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                                <br>
+                                <strong>الناشر:</strong> بانتام كلاسيكس<br>
+                                <strong>التصنيف:</strong> رواية درامية<br>
+                                <strong>ملخص:</strong> رواية عن الأمير ميشيل الذي يواجه عالمًا معقدًا ويعيش في صراع داخلي.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>الشيخ والبحر</td>
+                            <td>12000 ل.س</td>
+                            <td>978-0684801223</td>
+                            <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                            <td><button onclick="addToCart('الشيخ والبحر', 12000)">إضافة</button></td>
+                        </tr>
+                        <tr class="details" style="display:none;">
+                            <td colspan="5">
+                                <img src="images\الشيخ والبحر.jpg" alt="غلاف الكتاب - الشيخ والبحر" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                                <br>
+                                <strong>الناشر:</strong> سايمون وشوستر<br>
+                                <strong>التصنيف:</strong> رواية قصيرة<br>
+                                <strong>ملخص:</strong> قصة عن الصراع بين الشيخ والبحر في محاولة للعثور على السمكة الكبيرة.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>الخيميائي</td>
+                            <td>35000 ل.س</td>
+                            <td>978-0062315007</td>
+                            <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                            <td><button onclick="addToCart('الخيميائي', 35000)">إضافة</button></td>
+                        </tr>
+                        <tr class="details" style="display:none;">
+                            <td colspan="5">
+                                <img src="images\الخيميائي.jpg" alt="غلاف الكتاب - الخيميائي" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                                <br>
+                                <strong>الناشر:</strong> ريفرهاد<br>
+                                <strong>التصنيف:</strong> رواية فلسفية<br>
+                                <strong>ملخص:</strong> قصة شاب يسعى لتحقيق حلمه في البحث عن كنز بعيد في الصحراء.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>عالم صوفي</td>
+                            <td>20000 ل.س</td>
+                            <td>978-0140159145</td>
+                            <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                            <td><button onclick="addToCart('عالم صوفي', 20000)">إضافة</button></td>
+                        </tr>
+                        <tr class="details" style="display:none;">
+                            <td colspan="5">
+                                <img src="images\عالم صوفي.jpg" alt="غلاف الكتاب - عالم صوفي" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                                <br>
+                                <strong>الناشر:</strong> بانتام<br>
+                                <strong>التصنيف:</strong> فلسفة<br>
+                                <strong>ملخص:</strong> رواية فلسفية عن الفتاة صوفي وتعلمها عن تاريخ الفلسفة.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>البؤساء</td>
+                            <td>37000 ل.س</td>
+                            <td>978-0451419439</td>
+                            <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                            <td><button onclick="addToCart('البؤساء', 37000)">إضافة</button></td>
+                        </tr>
+                        <tr class="details" style="display:none;">
+                            <td colspan="5">
+                                <img src="images\البؤساء.jpg" alt="غلاف الكتاب - البؤساء" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                                <br>
+                                <strong>الناشر:</strong> بانتام<br>
+                                <strong>التصنيف:</strong> رواية اجتماعية<br>
+                                <strong>ملخص:</strong> تدور حول حياة رجل فقير وسعيه للعدالة في وجه الظلم الاجتماعي.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>الحياة في اللامكان</td>
+                            <td>23000 ل.س</td>
+                            <td>978-0060193787</td>
+                            <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                            <td><button onclick="addToCart('الحياة في اللامكان', 23000)">إضافة</button></td>
+                        </tr>
+                        <tr class="details" style="display:none;">
+                            <td colspan="5">
+                                <img src="images\الحياة في اللامكان.jpg" alt="غلاف الكتاب - الحياة في اللامكان" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                                <br>
+                                <strong>الناشر:</strong> ريفرهد<br>
+                                <strong>التصنيف:</strong> رواية علمية<br>
+                                <strong>ملخص:</strong> رواية تتناول مفاهيم الحياة والوجود في عالم غير واقعي.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>الدم والنار</td>
+                            <td>40000 ل.س</td>
+                            <td>978-0385507511</td>
+                            <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                            <td><button onclick="addToCart('الدم والنار', 40000)">إضافة</button></td>
+                        </tr>
+                        <tr class="details" style="display:none;">
+                            <td colspan="5">
+                                <img src="images\الدم والنار.jpg" alt="غلاف الكتاب - الدم والنار" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                                <br>
+                                <strong>الناشر:</strong> دبلداي<br>
+                                <strong>التصنيف:</strong> تاريخي<br>
+                                <strong>ملخص:</strong> كتاب عن الحروب الدموية في العصور الوسطى وتأثيرها على العالم.
+                            </td>
+                        </tr>
+
+
+                </tbody>
+            </table>
+        </section>
+
+        <!-- سلة الشراء -->
+        <section class="cart">
+            <h2>سلة الشراء</h2>
+            <ul id="cartItems">
+
+            </ul>
+            <p id="totalPrice">المجموع الكلي: 0 ل.س</p>
+            <!-- نموذج إدخال معلومات المستخدم -->
+            <form onsubmit="return validateCartForm()">
+                <h3>إدخال معلومات الشراء</h3>
+                <label for="name">الاسم الكامل:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="id">الرقم الوطني:</label>
+                <input type="text" id="id" name="id" required>
+                <label for="dob">تاريخ الولادة:</label>
+                <input type="date" id="dob" name="dob" required>
+                <label for="phone">رقم الموبايل:</label>
+                <input type="text" id="phone" name="phone" required>
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">إتمام الشراء</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>عن الموقع</h3>
+                <p>نحن هنا لنقدم لك تجربة قراءة استثنائية، حيث نحرص على جمع أروع الكتب التي تجمع بين المعرفة والتسلية. من الروايات المثيرة إلى الكتب العلمية والفكرية، نحن نقدم لك محتوى يعكس التنوع الثقافي والفكري. هدفنا هو أن تكون مكتبتنا المكان الذي يلتقي
+                    فيه حب القراءة بالاستكشاف المستمر، فنحن نبحث دائمًا عن أحدث الإصدارات التي تفتح الأفق وتنير العقول. إذا كنت تبحث عن إثراء معرفتك أو الهروب إلى عالم آخر من الخيال، نحن هنا لنقدم لك ما تبحث عنه.</p>
+
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="AboutUs.html">about us </a></li>
+                    <li><a href="AboutUs.html">contact us </a></li>
+                    <li><a href="Books.html">store</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">حقوق الطبع والنشر محفوظة &copy; 2024. جميع الحقوق محفوظة. تم تصميم وتطوير هذا الموقع بواسطة فريقنا المحترف.</p>
+
+    </footer>
+
+</body>
+
+</html>
